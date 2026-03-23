@@ -9,7 +9,7 @@ import type { HungerLevel } from 'src/types/pizza.type';
  * @param hungerLevel Hunger level of the people (light, normal, very_hungry)
  *
  * @returns Number of pizzas needed
- * 
+ *
  * @throws Will throw an error if the number of people is not a positive finite number
  */
 export function calculatePizzasNeeded(numPeople: number, hungerLevel: HungerLevel): number {
