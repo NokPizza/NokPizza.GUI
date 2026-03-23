@@ -14,6 +14,8 @@
 
   --color-primary: #ea580c;
   --color-primary-hover: #c2410c;
+
+  --color-icon: #6b7280;
 }
 
 .dark {
@@ -22,10 +24,11 @@
 
   --color-primary: #fb923c;
   --color-primary-hover: #f97316;
+
+  --color-icon: #9ca3af;
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
   background: var(--color-bg);
   color: var(--color-text);
 

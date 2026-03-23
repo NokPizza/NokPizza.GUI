@@ -1,3 +1,13 @@
-nok
-
+CPath
+CSvg
 vite
+
+Småsulten
+Sulten
+Skrubbsulten
+nok
+Antall
+Personer
+Hvor
+Trenger
+Pizzaer
