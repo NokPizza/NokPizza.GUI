@@ -1,0 +1,28 @@
+.theme-toggle__icon {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--color-icon);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+  padding: 0.375rem;
+  border-radius: 0.5rem;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.theme-toggle:hover {
+  background: color-mix(in srgb, var(--color-text) 8%, transparent);
+}
