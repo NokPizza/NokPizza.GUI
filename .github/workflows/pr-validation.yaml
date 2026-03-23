@@ -32,6 +32,7 @@ jobs:
 
 
   validate-code-style:
+    name: Validate code style
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
