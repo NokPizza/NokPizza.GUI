@@ -11,7 +11,8 @@
 }
 
 .number-input__field {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 0.5rem;
   background: var(--color-bg);
@@ -33,15 +34,17 @@
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--color-text);
-  width: 3rem;
+  min-width: 0;
   text-align: center;
   /* hide browser spinners */
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 
 .number-input__field input::-webkit-outer-spin-button,
 .number-input__field input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  appearance: none;
 }
 
 .number-input__btn {
