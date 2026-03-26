@@ -2,7 +2,7 @@ import './ThemeToggle.css';
 
 type Props = {
   theme: 'light' | 'dark';
-  onToggle: () => void;
+  onToggle: (theme: 'light' | 'dark') => void;
 };
 
 function SunIcon() {
@@ -24,8 +24,23 @@ function MoonIcon() {
 
 export function ThemeToggle({ theme, onToggle }: Props) {
   return (
-    <button className="theme-toggle" onClick={onToggle} aria-label="Toggle theme">
-      {theme === 'light' ? <MoonIcon /> : <SunIcon />}
-    </button>
+    <div className="theme-toggle-pill">
+      <button
+        className={`theme-toggle-btn${theme === 'light' ? ' theme-toggle-btn--active' : ''}`}
+        onClick={() => onToggle('light')}
+        aria-label="Lyst tema"
+      >
+        <SunIcon />
+        Lys
+      </button>
+      <button
+        className={`theme-toggle-btn${theme === 'dark' ? ' theme-toggle-btn--active' : ''}`}
+        onClick={() => onToggle('dark')}
+        aria-label="Mørkt tema"
+      >
+        <MoonIcon />
+        Mørk
+      </button>
+    </div>
   );
 }
