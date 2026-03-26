@@ -3,6 +3,8 @@ CSvg
 coredemo
 vite
 
+nokpizza
+
 Antall
 Deilige
 Dere
