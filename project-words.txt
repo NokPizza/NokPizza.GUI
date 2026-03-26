@@ -1,6 +1,7 @@
 CPath
 CSvg
 vite
+coredemo
 
 Småsulten
 Sulten
