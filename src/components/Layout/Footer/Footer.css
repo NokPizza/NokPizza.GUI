@@ -1,0 +1,19 @@
+.footer {
+  border-top: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+  margin-top: 2rem;
+}
+
+.footer__inner {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__copy {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-icon);
+}
