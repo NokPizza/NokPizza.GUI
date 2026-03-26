@@ -64,7 +64,7 @@ const Index = () => {
               <span className="result-number">{pizzas}</span>
               <span className="result-unit">{pizzas === 1 ? 'pizza' : 'pizzaer'}</span>
               <span className="result-detail">
-                ({totalSlices} stykker til {people} {people === 1 ? 'person' : 'personer'})
+                ({totalSlices} pizzastykker til {people} {people === 1 ? 'person' : 'personer'})
               </span>
             </div>
           )}
