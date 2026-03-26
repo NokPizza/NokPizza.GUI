@@ -1,0 +1,22 @@
+name: Azure Static Web Apps CI/CD
+
+on:
+  workflow_call:
+    inputs:
+      ref:
+        description: Git ref to deploy, such as refs/tags/v1.2.3
+        required: false
+        type: string
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Git ref to deploy, such as refs/heads/main or refs/tags/v1.2.3
+        required: false
+        type: string
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/azure-deploy.yml
+    with:
+      ref: ${{ inputs.ref }}
+    secrets: inherit
