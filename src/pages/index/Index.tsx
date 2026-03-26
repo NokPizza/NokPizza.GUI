@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Index.css';
-import { NumberInput } from '../../components/Inputs/NumberInput';
+import { NumberInput } from '../../components/Inputs/NumberInput/NumberInput';
 import { calculatePizzasNeeded } from '../../utils/pizza/pizzaCalculator';
 import { HUNGER_OPTIONS, SLICES_PER_PERSON } from '../../utils/pizza/pizza.constants';
 import type { HungerLevel } from '../../types/pizza.type';

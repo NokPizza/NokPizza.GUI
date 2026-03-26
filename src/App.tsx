@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Header } from './components/Layout/Header';
-import { Footer } from './components/Layout/Footer';
+import { Header } from './components/Layout/Header/Header';
+import { Footer } from './components/Layout/Footer/Footer';
 import Index from './pages/index/Index';
 import NotFound from './pages/not-found/NotFound';
 
