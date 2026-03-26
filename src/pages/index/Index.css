@@ -163,8 +163,13 @@
 }
 
 @keyframes bounce-pizza {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(3deg); }
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
 }
 
 .result-bg-emoji {
@@ -240,4 +245,3 @@
     font-size: 0.65rem;
   }
 }
-

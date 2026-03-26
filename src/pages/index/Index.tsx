@@ -60,7 +60,9 @@ const Index = () => {
 
           {pizzas !== null && totalSlices !== null && (
             <div className="result">
-              <span className="result-bg-emoji" aria-hidden="true">🍕</span>
+              <span className="result-bg-emoji" aria-hidden="true">
+                🍕
+              </span>
               <span className="result-label">Dere trenger</span>
               <span className="result-number">{pizzas}</span>
               <span className="result-unit">{pizzas === 1 ? 'pizza' : 'pizzaer'}</span>
@@ -71,7 +73,6 @@ const Index = () => {
           )}
         </main>
       </div>
-
     </>
   );
 };
