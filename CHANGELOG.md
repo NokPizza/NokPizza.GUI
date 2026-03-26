@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/NokPizza/NokPizza.GUI/compare/v1.0.0...v2.0.0) (2026-03-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* Implement new design ([#8](https://github.com/NokPizza/NokPizza.GUI/issues/8))
+
+### Features
+
+* Implement new design ([#8](https://github.com/NokPizza/NokPizza.GUI/issues/8)) ([6bfd5e4](https://github.com/NokPizza/NokPizza.GUI/commit/6bfd5e49e5c2f38aebb84e616efafc3b352ac58e))
+
 ## 1.0.0 (2026-03-26)
 
 
