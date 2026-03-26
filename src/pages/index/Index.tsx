@@ -72,7 +72,6 @@ const Index = () => {
         </main>
       </div>
 
-      <footer className="footer">Laget med 🍕 av NokPizza</footer>
     </>
   );
 };

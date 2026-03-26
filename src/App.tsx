@@ -1,15 +1,19 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Layout/Header';
+import { Footer } from './components/Layout/Footer';
 import Index from './pages/index/Index';
 import NotFound from './pages/not-found/NotFound';
 
 const App = () => (
   <BrowserRouter>
     <Header />
-    <Routes>
-      <Route path="/" element={<Index />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <div className="page-content">
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </div>
+    <Footer />
   </BrowserRouter>
 );
 
