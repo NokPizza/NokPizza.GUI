@@ -30,7 +30,9 @@ export function Header() {
   const visible = !isHome || effectiveScrolled;
 
   return (
-    <header className={`header${visible ? ' header--visible' : ''}${effectiveScrolled || !isHome ? ' header--bg' : ''}`}>
+    <header
+      className={`header${visible ? ' header--visible' : ''}${effectiveScrolled || !isHome ? ' header--bg' : ''}`}
+    >
       <div className="header__inner">
         <Link className="header__logo" to="/">
           Nok<span>Pizza</span>
