@@ -1,0 +1,46 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  background: var(--color-bg);
+}
+
+.not-found__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.not-found__emoji {
+  font-size: 3rem;
+}
+
+.not-found__title {
+  margin: 0;
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.not-found__message {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--color-icon);
+}
+
+.not-found__link {
+  margin-top: 0.5rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.not-found__link:hover {
+  text-decoration: underline;
+}

@@ -1,6 +1,8 @@
 import './App.css';
 import { useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { NumberInput } from './components/Inputs/NumberInput';
+import NotFound from './pages/NotFound';
 import { calculatePizzasNeeded } from './utils/pizza/pizzaCalculator';
 import { HUNGER_OPTIONS, SLICES_PER_PERSON } from './utils/pizza/pizza.constants';
 import type { HungerLevel } from './types/pizza.type';
@@ -26,6 +28,26 @@ function App() {
   const pizzas = people !== null ? calculatePizzasNeeded(people, hungerLevel) : null;
   const totalSlices = people !== null ? people * SLICES_PER_PERSON[hungerLevel] : null;
 
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Home people={people} setPeople={setPeople} hungerLevel={hungerLevel} setHungerLevel={setHungerLevel} pizzas={pizzas} totalSlices={totalSlices} />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+type HomeProps = {
+  people: number | null;
+  setPeople: (v: number | null) => void;
+  hungerLevel: HungerLevel;
+  setHungerLevel: (v: HungerLevel) => void;
+  pizzas: number | null;
+  totalSlices: number | null;
+};
+
+function Home({ people, setPeople, hungerLevel, setHungerLevel, pizzas, totalSlices }: HomeProps) {
   return (
     <>
       <div className="hero">

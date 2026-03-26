@@ -78,15 +78,6 @@
     0 12px 40px color-mix(in srgb, var(--color-text) 10%, transparent);
 }
 
-/* Override NumberInput label to match design */
-.number-input label {
-  font-size: 0.75rem !important;
-  font-weight: 600 !important;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-icon) !important;
-}
-
 /* Hunger selector */
 .hunger-selector {
   display: flex;
@@ -194,6 +185,40 @@
   font-size: 0.85rem;
   opacity: 0.65;
   margin-top: 0.5rem;
+}
+
+/* Small screens (iPhone SE: 375px) */
+@media (max-width: 430px) {
+  .app {
+    padding: 0 0.625rem 2rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+    border-radius: 1rem;
+  }
+
+  .hunger-selector__cards {
+    gap: 0.5rem;
+  }
+
+  .hunger-card {
+    padding: 0.875rem 0.25rem;
+    gap: 0.3rem;
+    border-radius: 0.75rem;
+  }
+
+  .hunger-card__emoji {
+    font-size: 1.3rem;
+  }
+
+  .hunger-card__label {
+    font-size: 0.8rem;
+  }
+
+  .hunger-card__desc {
+    font-size: 0.65rem;
+  }
 }
 
 /* Footer */
