@@ -162,6 +162,11 @@
   color: #fff;
 }
 
+@keyframes bounce-pizza {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
 .result-bg-emoji {
   position: absolute;
   top: -1rem;
@@ -170,6 +175,7 @@
   opacity: 0.1;
   pointer-events: none;
   line-height: 1;
+  animation: bounce-pizza 2s ease-in-out infinite;
 }
 
 .result-label {
