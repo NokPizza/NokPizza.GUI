@@ -29,6 +29,7 @@ export function ThemeToggle({ theme, onToggle }: Props) {
         className={`theme-toggle-btn${theme === 'light' ? ' theme-toggle-btn--active' : ''}`}
         onClick={() => onToggle('light')}
         aria-label="Lyst tema"
+        aria-pressed={theme === 'light'}
       >
         <SunIcon />
         Lys
@@ -37,6 +38,7 @@ export function ThemeToggle({ theme, onToggle }: Props) {
         className={`theme-toggle-btn${theme === 'dark' ? ' theme-toggle-btn--active' : ''}`}
         onClick={() => onToggle('dark')}
         aria-label="Mørkt tema"
+        aria-pressed={theme === 'dark'}
       >
         <MoonIcon />
         Mørk

@@ -6,11 +6,11 @@ import { HUNGER_OPTIONS, SLICES_PER_PERSON } from '../../utils/pizza/pizza.const
 import type { HungerLevel } from '../../types/pizza.type';
 import heroImg from '../../assets/hero.jpg';
 
-const HUNGER_CARDS: { value: HungerLevel; emoji: string; description: string }[] = [
-  { value: 'light', emoji: '🍕', description: 'Et par biter holder' },
-  { value: 'normal', emoji: '🍕🍕', description: 'En skikkelig porsjon' },
-  { value: 'very_hungry', emoji: '🍕🍕🍕', description: 'Alt du har!' },
-];
+const HUNGER_CARDS: Record<HungerLevel, { emoji: string; description: string }> = {
+  light: { emoji: '🍕', description: 'Et par biter holder' },
+  normal: { emoji: '🍕🍕', description: 'En skikkelig porsjon' },
+  very_hungry: { emoji: '🍕🍕🍕', description: 'Alt du har!' },
+};
 
 const Index = () => {
   const [people, setPeople] = useState<number | null>(1);
@@ -41,13 +41,13 @@ const Index = () => {
           <div className="hunger-selector">
             <label className="hunger-selector__label">Hvor sulten?</label>
             <div className="hunger-selector__cards">
-              {HUNGER_CARDS.map(card => {
-                const option = HUNGER_OPTIONS.find(o => o.value === card.value)!;
+              {HUNGER_OPTIONS.map(option => {
+                const card = HUNGER_CARDS[option.value];
                 return (
                   <button
-                    key={card.value}
-                    className={`hunger-card${hungerLevel === card.value ? ' hunger-card--active' : ''}`}
-                    onClick={() => setHungerLevel(card.value)}
+                    key={option.value}
+                    className={`hunger-card${hungerLevel === option.value ? ' hunger-card--active' : ''}`}
+                    onClick={() => setHungerLevel(option.value)}
                   >
                     <span className="hunger-card__emoji">{card.emoji}</span>
                     <span className="hunger-card__label">{option.label}</span>

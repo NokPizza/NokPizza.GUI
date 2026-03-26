@@ -1,6 +1,6 @@
 import './Header.css';
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ThemeToggle } from '../Buttons/ThemeToggle/ThemeToggle';
 
 export function Header() {
@@ -19,8 +19,12 @@ export function Header() {
   }, [theme]);
 
   useEffect(() => {
-    if (!isHome) return;
+    if (!isHome) {
+      setScrolled(false);
+      return;
+    }
     const onScroll = () => setScrolled(window.scrollY > 200);
+    onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, [isHome]);
@@ -30,9 +34,9 @@ export function Header() {
   return (
     <header className={`header${visible ? ' header--visible' : ''}${scrolled || !isHome ? ' header--bg' : ''}`}>
       <div className="header__inner">
-        <a className="header__logo" href="/">
+        <Link className="header__logo" to="/">
           Nok<span>Pizza</span>
-        </a>
+        </Link>
         <ThemeToggle theme={theme} onToggle={setTheme} />
       </div>
     </header>
