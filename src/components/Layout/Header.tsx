@@ -19,20 +19,18 @@ export function Header() {
   }, [theme]);
 
   useEffect(() => {
-    if (!isHome) {
-      setScrolled(false);
-      return;
-    }
+    if (!isHome) return;
     const onScroll = () => setScrolled(window.scrollY > 200);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, [isHome]);
 
-  const visible = !isHome || scrolled;
+  const effectiveScrolled = isHome && scrolled;
+  const visible = !isHome || effectiveScrolled;
 
   return (
-    <header className={`header${visible ? ' header--visible' : ''}${scrolled || !isHome ? ' header--bg' : ''}`}>
+    <header className={`header${visible ? ' header--visible' : ''}${effectiveScrolled || !isHome ? ' header--bg' : ''}`}>
       <div className="header__inner">
         <Link className="header__logo" to="/">
           Nok<span>Pizza</span>
