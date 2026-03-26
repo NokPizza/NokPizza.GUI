@@ -33,9 +33,12 @@ function App() {
           <SelectInput label="Hvor sulten?" value={hungerLevel} options={HUNGER_OPTIONS} onChange={setHungerLevel} />
 
           {pizzas !== null && (
-            <p className="result">
-              Du trenger <strong>{pizzas}</strong> {pizzas === 1 ? 'pizza' : 'pizzaer'} 🍕
-            </p>
+            <div className="result">
+              <span className="result-label">Du trenger</span>
+              <span className="result-number">{pizzas}</span>
+              <span className="result-emoji">🍕</span>
+              <span className="result-unit">{pizzas === 1 ? 'pizza' : 'pizzaer'}</span>
+            </div>
           )}
         </main>
       </div>

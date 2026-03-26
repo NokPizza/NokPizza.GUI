@@ -7,6 +7,9 @@ type Props = {
   min?: number;
 };
 
+// Allow only digit keys
+const DIGIT_ONLY = /[\d]/;
+
 export function NumberInput({ label, value, onChange, min = 1 }: Props) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.value === '') {
@@ -28,7 +31,16 @@ export function NumberInput({ label, value, onChange, min = 1 }: Props) {
         >
           −
         </button>
-        <input type="number" value={value ?? ''} min={min} placeholder="0" onChange={handleChange} />
+        <input
+          type="text"
+          inputMode="numeric"
+          value={value ?? ''}
+          placeholder="0"
+          onKeyDown={e => {
+            if (!DIGIT_ONLY.test(e.key) && e.key.length === 1) e.preventDefault();
+          }}
+          onChange={handleChange}
+        />
         <button className="number-input__btn" onClick={() => onChange((value ?? 0) + 1)}>
           +
         </button>
