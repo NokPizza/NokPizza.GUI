@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.0](https://github.com/NokPizza/NokPizza.GUI/compare/v2.0.0...v2.1.0) (2026-03-29)
+
+
+### Features
+
+* Update HTML metadata and files to optimize SEO ([#11](https://github.com/NokPizza/NokPizza.GUI/issues/11)) ([fc6dfc8](https://github.com/NokPizza/NokPizza.GUI/commit/fc6dfc820e5542a5aa3fdc4f32746754bc192592))
+
+
+### Bug Fixes
+
+* Deploy actions ([e8237df](https://github.com/NokPizza/NokPizza.GUI/commit/e8237df54650bb2946c3f585fe83e7f7d0c9664a))
+
 ## [2.0.0](https://github.com/NokPizza/NokPizza.GUI/compare/v1.0.0...v2.0.0) (2026-03-26)
 
 
