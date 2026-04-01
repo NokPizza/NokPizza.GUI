@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/NokPizza/NokPizza.GUI/compare/v2.1.0...v2.2.0) (2026-04-01)
+
+
+### Features
+
+* Add index now ([#12](https://github.com/NokPizza/NokPizza.GUI/issues/12)) ([297483b](https://github.com/NokPizza/NokPizza.GUI/commit/297483b953fe37eae4e7177dde1a86bba782e7db))
+
 ## [2.1.0](https://github.com/NokPizza/NokPizza.GUI/compare/v2.0.0...v2.1.0) (2026-03-29)
 
 
