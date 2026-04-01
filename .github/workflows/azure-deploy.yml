@@ -43,3 +43,14 @@ jobs:
           api_location: ''
           output_location: 'dist'
           github_id_token: ${{ steps.idtoken.outputs.result }}
+
+      - name: Notify IndexNow
+        run: |
+          curl --fail-with-body -sS -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "host": "nokpizza.no",
+              "key": "d4fac2f50870400e946241f1b32c4773",
+              "keyLocation": "https://nokpizza.no/d4fac2f50870400e946241f1b32c4773.txt",
+              "urlList": ["https://nokpizza.no/"]
+            }'
