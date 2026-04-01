@@ -46,7 +46,7 @@ jobs:
 
       - name: Notify IndexNow
         run: |
-          curl -s -o /dev/null -w "%{http_code}" -X POST "https://api.indexnow.org/indexnow" \
+          curl --fail-with-body -sS -X POST "https://api.indexnow.org/indexnow" \
             -H "Content-Type: application/json" \
             -d '{
               "host": "nokpizza.no",
