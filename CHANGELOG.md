@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/NokPizza/NokPizza.GUI/compare/v2.2.0...v2.2.1) (2026-04-03)
+
+
+### Bug Fixes
+
+* update primary color variables and hover state for theme toggle button ([#15](https://github.com/NokPizza/NokPizza.GUI/issues/15)) ([7e10863](https://github.com/NokPizza/NokPizza.GUI/commit/7e1086335541db48477248d2c5c2d228a7e18ede))
+
 ## [2.2.0](https://github.com/NokPizza/NokPizza.GUI/compare/v2.1.0...v2.2.0) (2026-04-01)
 
 
