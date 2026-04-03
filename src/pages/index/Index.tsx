@@ -8,8 +8,8 @@ import heroImg from '../../assets/hero.jpg';
 
 const HUNGER_CARDS: Record<HungerLevel, { emoji: string; description: string }> = {
   light: { emoji: '🍕', description: 'Et par biter holder' },
-  normal: { emoji: '🍕🍕', description: 'En skikkelig porsjon' },
-  very_hungry: { emoji: '🍕🍕🍕', description: 'Alt du har!' },
+  normal: { emoji: '🍕🍕', description: 'Akkurat passe' },
+  very_hungry: { emoji: '🍕🍕🍕', description: 'Spis til du sprekker' },
 };
 
 const Index = () => {
