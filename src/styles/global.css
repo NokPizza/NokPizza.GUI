@@ -29,9 +29,16 @@
 }
 
 body {
+  margin: 0;
   background: var(--color-bg);
   color: var(--color-text);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
 }

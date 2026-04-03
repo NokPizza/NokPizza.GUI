@@ -10,6 +10,7 @@ nokpizza
 
 aldri
 Antall
+Akkurat
 basert
 biter
 Deilige
@@ -47,6 +48,8 @@ siden
 skikkelig
 Skrubbsulten
 Småsulten
+Spis
+sprekker
 stykker
 sultne
 Sulten
