@@ -1,11 +1,17 @@
 name: Azure Static Web Apps Entry
 
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       ref:
         description: Git ref to deploy, such as refs/tags/v1.2.3
-        required: true
+        required: false
+        type: string
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Optional Git ref override. Leave empty to use the current ref.
+        required: false
         type: string
 
 permissions:
@@ -19,5 +25,5 @@ jobs:
     name: Call Reusable Azure Deploy
     uses: ./.github/workflows/azure-deploy.yml
     with:
-      ref: ${{ inputs.ref }}
+      ref: ${{ inputs.ref || github.ref }}
     secrets: inherit
