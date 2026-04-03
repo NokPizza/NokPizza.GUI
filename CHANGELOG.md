@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.3](https://github.com/NokPizza/NokPizza.GUI/compare/v2.2.2...v2.2.3) (2026-04-03)
+
+
+### Bug Fixes
+
+* hunger levels and css ([#19](https://github.com/NokPizza/NokPizza.GUI/issues/19)) ([6173dd4](https://github.com/NokPizza/NokPizza.GUI/commit/6173dd41f111e3e965c258c8e11b069e9933b925))
+
 ## [2.2.2](https://github.com/NokPizza/NokPizza.GUI/compare/v2.2.1...v2.2.2) (2026-04-03)
 
 
