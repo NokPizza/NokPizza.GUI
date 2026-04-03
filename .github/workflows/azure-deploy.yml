@@ -39,6 +39,7 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_POLITE_MUSHROOM_040C43103 }}
           action: 'upload'
+          production_branch: 'main'
           app_location: '/'
           api_location: ''
           output_location: 'dist'
