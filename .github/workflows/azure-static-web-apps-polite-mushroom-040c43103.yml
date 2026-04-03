@@ -1,17 +1,11 @@
 name: Azure Static Web Apps Entry
 
 on:
-  workflow_call:
-    inputs:
-      ref:
-        description: Git ref to deploy, such as refs/tags/v1.2.3
-        required: false
-        type: string
   workflow_dispatch:
     inputs:
       ref:
-        description: Git ref to deploy, such as refs/heads/main or refs/tags/v1.2.3
-        required: false
+        description: Git ref to deploy, such as refs/tags/v1.2.3
+        required: true
         type: string
 
 permissions:
