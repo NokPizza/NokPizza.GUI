@@ -1,4 +1,4 @@
-name: Azure Static Web Apps CI/CD
+name: Azure Static Web Apps Entry
 
 on:
   workflow_call:
@@ -14,8 +14,15 @@ on:
         required: false
         type: string
 
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+  id-token: write
+
 jobs:
   deploy:
+    name: Call Reusable Azure Deploy
     uses: ./.github/workflows/azure-deploy.yml
     with:
       ref: ${{ inputs.ref }}

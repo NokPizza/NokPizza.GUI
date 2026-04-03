@@ -1,4 +1,4 @@
-name: Azure Static Web Apps CI/CD
+name: Azure Static Web Apps Reusable Deploy
 
 on:
   workflow_call:
@@ -13,8 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     permissions:
-      id-token: write
       contents: read
+      issues: write
+      pull-requests: write
+      id-token: write
     steps:
       - uses: actions/checkout@v3
         with:
@@ -38,6 +40,7 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_POLITE_MUSHROOM_040C43103 }}
+          repo_token: ${{ github.token }}
           action: 'upload'
           production_branch: 'main'
           app_location: '/'
