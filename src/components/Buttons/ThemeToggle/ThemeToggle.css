@@ -38,6 +38,7 @@
 }
 
 .theme-toggle-btn--active:hover {
+  background: var(--color-primary-hover);
   color: #fff;
 }
 
