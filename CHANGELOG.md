@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.2](https://github.com/NokPizza/NokPizza.GUI/compare/v2.2.1...v2.2.2) (2026-04-03)
+
+
+### Bug Fixes
+
+* update workflow names and permissions in Azure deployment configurations ([#17](https://github.com/NokPizza/NokPizza.GUI/issues/17)) ([a11e732](https://github.com/NokPizza/NokPizza.GUI/commit/a11e73219fcae692b48576ba7ad1063be28a5add))
+
 ## [2.2.1](https://github.com/NokPizza/NokPizza.GUI/compare/v2.2.0...v2.2.1) (2026-04-03)
 
 
