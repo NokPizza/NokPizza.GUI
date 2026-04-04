@@ -14,11 +14,12 @@
     <title>NokPizza | Pizzakalkulator for hvor mange pizzaer du trenger</title>
     <meta
       name="description"
-      content="NokPizza er en enkel pizzakalkulator som regner ut hvor mange pizzaer du trenger basert på antall personer og hvor sultne dere er."
+      content="NokPizza er en enkel pizzakalkulator som viser hvor mange pizzaer du trenger til 2, 4, 8, 10 eller flere personer, basert på hvor sultne dere er."
     />
 
     <link rel="canonical" href="https://nokpizza.no/" />
     <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#da3a1c" />
 
     <meta property="og:locale" content="nb_NO" />
     <meta property="og:type" content="website" />
@@ -26,26 +27,65 @@
     <meta property="og:title" content="NokPizza | Pizzakalkulator for hvor mange pizzaer du trenger" />
     <meta
       property="og:description"
-      content="Regn ut hvor mange pizzaer du trenger basert på antall personer og hvor sultne dere er."
+      content="NokPizza er en enkel pizzakalkulator som viser hvor mange pizzaer du trenger til 2, 4, 8, 10 eller flere personer, og hvor mye pizza som trengs."
     />
     <meta property="og:url" content="https://nokpizza.no/" />
+    <meta property="og:image" content="https://nokpizza.no/favicon.png" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="NokPizza | Pizzakalkulator for hvor mange pizzaer du trenger" />
-    <meta name="twitter:description" content="En enkel pizzakalkulator for å finne riktig antall pizzaer." />
+    <meta
+      name="twitter:description"
+      content="NokPizza er en enkel pizzakalkulator som viser hvor mange pizzaer du trenger til 2, 4, 8, 10 eller flere personer, og hvor mye pizza som trengs."
+    />
+    <meta name="twitter:image" content="https://nokpizza.no/favicon.png" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "NokPizza",
-        "alternateName": ["Nok Pizza", "NokPizza.no"],
-        "url": "https://nokpizza.no/"
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "NokPizza",
+            "alternateName": ["Nok Pizza", "NokPizza.no"],
+            "url": "https://nokpizza.no/",
+            "inLanguage": "nb-NO",
+            "description": "NokPizza er en enkel pizzakalkulator som viser hvor mange pizzaer du trenger til 2, 4, 8, 10 eller flere personer, og hvor mye pizza som trengs."
+          },
+          {
+            "@type": "WebApplication",
+            "name": "NokPizza",
+            "url": "https://nokpizza.no/",
+            "applicationCategory": "CalculatorApplication",
+            "operatingSystem": "Any",
+            "inLanguage": "nb-NO",
+            "description": "NokPizza er en enkel pizzakalkulator som viser hvor mange pizzaer du trenger til 2, 4, 8, 10 eller flere personer, og hvor mye pizza som trengs.",
+            "keywords": "hvor mange pizza,hvor mye pizza,hvor mange pizza til 10 personer,pizzakalkulator"
+          }
+        ]
       }
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <main>
+        <section
+          style="max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; font-family: Inter, system-ui, sans-serif"
+        >
+          <h1 style="margin: 0 0 1rem; font-family: 'Playfair Display', serif; font-size: 2.5rem">NokPizza</h1>
+          <p style="margin: 0 0 0.75rem; line-height: 1.6">
+            Regn ut hvor mange pizzaer du trenger til 2, 4, 8, 10 eller flere personer.
+          </p>
+          <p style="margin: 0; line-height: 1.6">
+            NokPizza er en enkel pizzakalkulator for deg som lurer på hvor mye pizza du trenger til en gruppe mennesker.
+          </p>
+        </section>
+      </main>
+    </div>
+    <noscript>
+      NokPizza fungerer best med JavaScript aktivert, men du finner fortsatt informasjon om hvor mange pizzaer du
+      trenger på denne siden.
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
