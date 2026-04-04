@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.4](https://github.com/NokPizza/NokPizza.GUI/compare/v2.2.3...v2.2.4) (2026-04-04)
+
+
+### Bug Fixes
+
+* refactor header component for improved visibility ([#23](https://github.com/NokPizza/NokPizza.GUI/issues/23)) ([f5378b8](https://github.com/NokPizza/NokPizza.GUI/commit/f5378b82edc72d79ce665488f870a444082302fd))
+
 ## [2.2.3](https://github.com/NokPizza/NokPizza.GUI/compare/v2.2.2...v2.2.3) (2026-04-03)
 
 
