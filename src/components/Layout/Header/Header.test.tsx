@@ -31,35 +31,27 @@ describe('Header', () => {
     });
   });
 
-  describe('visibility on home route', () => {
-    it('is hidden on home when not scrolled', () => {
+  describe('visibility', () => {
+    it('is visible on home without scrolling', () => {
       renderWithRoute('/');
+      expect(document.querySelector('.header')).toBeInTheDocument();
       expect(document.querySelector('.header')).not.toHaveClass('header--visible');
+      expect(document.querySelector('.header')).not.toHaveClass('header--bg');
     });
 
-    it('becomes visible after scrolling past 200px', () => {
+    it('stays visible after scrolling on home', () => {
       renderWithRoute('/');
       fireEvent.scroll(window, { target: { scrollY: 201 } });
-      expect(document.querySelector('.header')).toHaveClass('header--visible');
-    });
-
-    it('hides again when scrolling back to top', () => {
-      renderWithRoute('/');
-      fireEvent.scroll(window, { target: { scrollY: 201 } });
-      fireEvent.scroll(window, { target: { scrollY: 0 } });
+      expect(document.querySelector('.header')).toBeInTheDocument();
       expect(document.querySelector('.header')).not.toHaveClass('header--visible');
-    });
-  });
-
-  describe('visibility on other routes', () => {
-    it('is always visible on non-home routes', () => {
-      renderWithRoute('/some-page');
-      expect(document.querySelector('.header')).toHaveClass('header--visible');
+      expect(document.querySelector('.header')).not.toHaveClass('header--bg');
     });
 
-    it('has background on non-home routes', () => {
+    it('uses the same behavior on non-home routes', () => {
       renderWithRoute('/some-page');
-      expect(document.querySelector('.header')).toHaveClass('header--bg');
+      expect(document.querySelector('.header')).toBeInTheDocument();
+      expect(document.querySelector('.header')).not.toHaveClass('header--visible');
+      expect(document.querySelector('.header')).not.toHaveClass('header--bg');
     });
   });
 
