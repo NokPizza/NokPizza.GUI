@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { Header } from './Header';
 
@@ -31,35 +31,12 @@ describe('Header', () => {
     });
   });
 
-  describe('visibility on home route', () => {
-    it('is hidden on home when not scrolled', () => {
-      renderWithRoute('/');
-      expect(document.querySelector('.header')).not.toHaveClass('header--visible');
-    });
+  describe('rendering', () => {
+    it.each(['/', '/some-page'])('renders the sticky header on %s', path => {
+      renderWithRoute(path);
 
-    it('becomes visible after scrolling past 200px', () => {
-      renderWithRoute('/');
-      fireEvent.scroll(window, { target: { scrollY: 201 } });
-      expect(document.querySelector('.header')).toHaveClass('header--visible');
-    });
-
-    it('hides again when scrolling back to top', () => {
-      renderWithRoute('/');
-      fireEvent.scroll(window, { target: { scrollY: 201 } });
-      fireEvent.scroll(window, { target: { scrollY: 0 } });
-      expect(document.querySelector('.header')).not.toHaveClass('header--visible');
-    });
-  });
-
-  describe('visibility on other routes', () => {
-    it('is always visible on non-home routes', () => {
-      renderWithRoute('/some-page');
-      expect(document.querySelector('.header')).toHaveClass('header--visible');
-    });
-
-    it('has background on non-home routes', () => {
-      renderWithRoute('/some-page');
-      expect(document.querySelector('.header')).toHaveClass('header--bg');
+      expect(screen.getByRole('banner')).toHaveClass('header');
+      expect(screen.getByRole('link', { name: /nokpizza/i })).toBeInTheDocument();
     });
   });
 
