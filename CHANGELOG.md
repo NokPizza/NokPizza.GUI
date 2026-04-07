@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.5](https://github.com/NokPizza/NokPizza.GUI/compare/v2.2.4...v2.2.5) (2026-04-07)
+
+
+### Bug Fixes
+
+* Update very hungry calculation ([#28](https://github.com/NokPizza/NokPizza.GUI/issues/28)) ([844da09](https://github.com/NokPizza/NokPizza.GUI/commit/844da095889f801f624cedd3dc92e4334f5244a6))
+
 ## [2.2.4](https://github.com/NokPizza/NokPizza.GUI/compare/v2.2.3...v2.2.4) (2026-04-04)
 
 
