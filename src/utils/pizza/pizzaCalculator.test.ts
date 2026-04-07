@@ -19,8 +19,8 @@ describe('calculatePizzasNeeded', () => {
   });
 
   it('calculates correctly for very hungry', () => {
-    // 8 people * 4 slices = 32 slices → ceil(32/8) = 4
-    expect(calculatePizzasNeeded(8, 'very_hungry')).toBe(4);
+    // 8 people * 5 slices = 40 slices → ceil(40/8) = 5
+    expect(calculatePizzasNeeded(8, 'very_hungry')).toBe(5);
   });
 
   it('throws for zero people', () => {

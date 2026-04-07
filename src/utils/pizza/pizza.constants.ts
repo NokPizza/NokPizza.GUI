@@ -11,5 +11,5 @@ export const HUNGER_OPTIONS: { value: HungerLevel; label: string }[] = [
 export const SLICES_PER_PERSON: Record<HungerLevel, number> = {
   light: 2,
   normal: 3,
-  very_hungry: 4,
+  very_hungry: 5,
 };
