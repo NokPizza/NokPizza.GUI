@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './Index.css';
 import { NumberInput } from '../../components/Inputs/NumberInput/NumberInput';
 import { calculatePizzasNeeded } from '../../utils/pizza/pizzaCalculator';
 import { HUNGER_OPTIONS, SLICES_PER_PERSON } from '../../utils/pizza/pizza.constants';
 import type { HungerLevel } from '../../types/pizza.type';
-import heroImg from '../../assets/hero.jpg';
 
 const HUNGER_CARDS: Record<HungerLevel, { emoji: string; description: string }> = {
   light: { emoji: '🍕', description: 'Et par biter holder' },
@@ -15,6 +14,12 @@ const HUNGER_CARDS: Record<HungerLevel, { emoji: string; description: string }> 
 const Index = () => {
   const [people, setPeople] = useState<number | null>(1);
   const [hungerLevel, setHungerLevel] = useState<HungerLevel>('normal');
+  const [heroLoaded, setHeroLoaded] = useState(false);
+  const heroRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    if (heroRef.current?.complete) setHeroLoaded(true);
+  }, []);
 
   const pizzas = people !== null ? calculatePizzasNeeded(people, hungerLevel) : null;
   const totalSlices = people !== null ? people * SLICES_PER_PERSON[hungerLevel] : null;
@@ -22,7 +27,14 @@ const Index = () => {
   return (
     <>
       <div className="hero">
-        <img src={heroImg} alt="Deilige pizzaer" className="hero__img" />
+        <img
+          ref={heroRef}
+          src="/hero.jpg"
+          alt="Deilige pizzaer"
+          className={`hero__img${heroLoaded ? ' hero__img--loaded' : ''}`}
+          fetchPriority="high"
+          onLoad={() => setHeroLoaded(true)}
+        />
         <div className="hero__overlay" />
         <div className="hero__content">
           <h1 className="hero__title">
