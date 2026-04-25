@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/NokPizza/NokPizza.GUI/compare/v2.2.5...v2.3.0) (2026-04-25)
+
+
+### Features
+
+* Add skeleton load ([#30](https://github.com/NokPizza/NokPizza.GUI/issues/30)) ([e616542](https://github.com/NokPizza/NokPizza.GUI/commit/e6165429e388dc92f5288e378d6ed5dffc6d2e58))
+
 ## [2.2.5](https://github.com/NokPizza/NokPizza.GUI/compare/v2.2.4...v2.2.5) (2026-04-07)
 
 
