@@ -34,6 +34,7 @@ const Index = () => {
           className={`hero__img${heroLoaded ? ' hero__img--loaded' : ''}`}
           fetchPriority="high"
           onLoad={() => setHeroLoaded(true)}
+          onError={() => setHeroLoaded(true)}
         />
         <div className="hero__overlay" />
         <div className="hero__content">
